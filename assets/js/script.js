@@ -9,6 +9,10 @@ let highscore = {
 let currentQuestion = 0;
 // be able to click on start button to begin game
 let startButton = $('.start-btn');
+let startTime = $('.time');
+let mainContainer = $('.container');
+
+startTime.text(timer);
 
 function playGame() {
     // store all question, answers, and correct answer here to call on
@@ -24,53 +28,59 @@ function playGame() {
             correctAnswer: "b"   
         },
         {
-            question: "",
+            question: "What CSS property do we use to change the text color?",
             answers: {
-                a: "",
-                b: "",
-                c: "",
-                d: ""
+                a: "font-color:",
+                b: "style:",
+                c: "hue:",
+                d: "color:"
             },
-            correctAnswer: ""
+            correctAnswer: "d"
         },
         {
-            question: "",
+            question: "What tag is used to create a list with numbers?",
             answers: {
-                a: "",
-                b: "",
-                c: "",
-                d: ""
+                a: "<el>",
+                b: "<ol>",
+                c: "<ul>",
+                d: "<il>"
             },
-            correctAnswer: ""
+            correctAnswer: "b"
         },
         {
-            question: "",
+            question: "Which CSS property allows an element to stay in the same place even if the page is scrolled?",
             answers: {
-                a: "",
-                b: "",
-                c: "",
-                d: ""
+                a: "position:fixed",
+                b: "position:relative",
+                c: "position:absolute",
+                d: "position:static"
             },
-            correctAnswer: ""
+            correctAnswer: "a"
         },
         {
-            question: "",
+            question: "In HTML, what is the lowest level of heading?",
             answers: {
-                a: "",
-                b: "",
-                c: "",
-                d: ""
+                a: "h1",
+                b: "h3",
+                c: "h6",
+                d: "h9"
             },
-            correctAnswer: ""
+            correctAnswer: "c"
         }
     ]
 
     // timer function for score, when game ends, timer stops, keep note of score
     function startTimer() {
         var timeInterval = setInterval( function() {
-            timer -= 10;
+            timer--;
+            startTime.text(timer);
 
-        })
+            // if statement
+            // when game ends, stop timer from running
+
+            // call askInitial function
+
+        }, 1000);
     }
 
     // for loop, when answer is made
@@ -85,7 +95,9 @@ function playGame() {
     // highscore becomes leftover timer
     //store highscores into local storage and get them
 
-    //
+    function askInitial() {
+        
+    }
 
 }
 
