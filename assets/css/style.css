@@ -3,20 +3,17 @@
     font-family: "Helvetica", Arial, Helvetica, sans-serif;
 }
 
-h3 {
-    position: absolute;
-    right: 100px;
-    top: 20px;
-}
-
 body{
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: black;
+    color: white;
 }
 
 main {
-    background-color: aliceblue;
+    background-color: rgb(45, 137, 223);
+    box-shadow: 3px 3px rgb(26, 96, 161);
     border-radius: 10px;
     width: 500px;
     height: 400px;
@@ -29,14 +26,20 @@ main {
 .top {
     padding: 20px;
     display: flex;
-}
-
-.start-btn{
-    margin: 20px auto 10px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul {
     list-style-type: none;
+}
+
+.score-button {
+    background-color: white;
+    color: rgb(45, 137, 223);
+    padding: 10px 10px;
+    border-radius: 5px;
 }
 
 .container {
@@ -44,14 +47,32 @@ ul {
 }
 
 .start-btn {
-    margin-top: 50px;
+    box-shadow: 3px 3px rgb(26, 96, 161);
+    margin: 20px auto 10px;
+    padding: 5px 20px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(45, 137, 223);
 }
 
 .answer-btn {
     display: flex;
     flex-direction: column;
-    background-color: grey;
-    color: white;
+    background-color: white;
+    color: rgb(45, 137, 223);
     border-radius: 5px;
     margin: 5px;
+    padding: 5px 10px;
+}
+
+.message {
+    font-size: 20px;
+}
+
+.score-button:hover {
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    cursor: pointer;
 }

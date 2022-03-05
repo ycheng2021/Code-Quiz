@@ -78,19 +78,21 @@ answerChoices.addEventListener('click', function(event) {
             // once user chooses an answer, currentQuestion++
             questionCounter++;
             // if answer is wrong, add text "Wrong" and change message back to visible
-            message.textContent = "Wrong!"
-            message.style.visibility = "visible"
+            message.textContent = "Wrong!";
+            message.style.visibility = "visible";
+            message.style.color = "red";
         } else {
             questionCounter++;
             // if answer is correct, add text "Correct" and change message back to visible
-            message.textContent = "Correct"
+            message.textContent = "Correct!";
             isCorrect++
-            message.style.visibility = "visible"
+            message.style.visibility = "visible";
+            message.style.color = "green";
         }
         displayQuestion();
         setTimeout(() => {
             message.textContent = "";
-        }, 300);
+        }, 500);
     }
 })
 
