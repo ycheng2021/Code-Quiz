@@ -43,7 +43,7 @@ const myQuestions = [
     {
         question: "Which CSS property allows an element to stay in the same place even if the page is scrolled?",
         answers: ["A: position:fixed","B: position:relative","C: position:absolute","D: position:static"],
-        correctAnswer: "C: position:absolute"
+        correctAnswer: "A: position:fixed"
     },
     {
         question: "In HTML, what is the lowest level of heading?",
@@ -61,7 +61,7 @@ function startTimer() {
         time.textContent = timer;
         // if statement
         // when game ends, stop timer from running
-        if (questionCounter > 4) {
+        if (questionCounter > 4 || timer === 0) {
             clearInterval(timeInterval)
             // highscore becomes leftover timer
             highscore.score = timer
@@ -93,7 +93,7 @@ answerChoices.addEventListener('click', function(event) {
         setTimeout(() => {
             message.textContent = "";
         }, 500);
-    }
+    } 
 })
 
 function displayQuestion() {

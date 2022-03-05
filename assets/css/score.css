@@ -1,16 +1,24 @@
+* {
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
+}
+
 body{
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: rgb(26, 96, 161);
+    color: rgb(26, 96, 161);
 }
 
 h1 {
     margin: 20px auto;
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
 }
 
 .score-container {
-    background-color: lightgray;
+    background-color: white;
     border-radius: 10px;
     padding: 100px;
     width: 30%;
@@ -18,3 +26,10 @@ h1 {
     text-align: left;
 }
 
+.back-btn,
+.clear-score {
+    padding: 5px 10px;
+    color: rgb(26, 96, 161);
+    background-color: white;
+    border-radius: 5px;
+}

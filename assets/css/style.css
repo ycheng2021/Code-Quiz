@@ -1,6 +1,6 @@
 * {
     font-size: 16px;
-    font-family: "Helvetica", Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 body{
@@ -53,6 +53,7 @@ ul {
     background-color: white;
     border-radius: 5px;
     color: rgb(45, 137, 223);
+    font-size: 20px;
 }
 
 .answer-btn {
