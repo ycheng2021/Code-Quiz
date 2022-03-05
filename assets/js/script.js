@@ -6,6 +6,8 @@ let answerChoices = document.querySelector('.multiple-choices');
 let startText = document.querySelector('.startText');
 let message = document.querySelector('.message');
 let highscoreButton = document.querySelector('.highscores');
+let hiddenInitial = document.querySelector('.hidden');
+let submitButton = document.querySelector('.submit');
 // let clearButton = document.querySelector('.clear-score');
 
 // countdown timer
@@ -80,14 +82,12 @@ answerChoices.addEventListener('click', function(event) {
             // if answer is wrong, add text "Wrong" and change message back to visible
             message.textContent = "Wrong!";
             message.style.visibility = "visible";
-            message.style.color = "red";
         } else {
             questionCounter++;
             // if answer is correct, add text "Correct" and change message back to visible
             message.textContent = "Correct!";
             isCorrect++
             message.style.visibility = "visible";
-            message.style.color = "green";
         }
         displayQuestion();
         setTimeout(() => {
@@ -119,13 +119,23 @@ function displayQuestion() {
 }
 
 function displayFinalScore() {
-    // add back highscore button
-    highscoreButton.style.visibility = "visible";
     let timeOnPage = timer-1;
     //display score
     startText.textContent = "Congratulations, you finished the quiz! You scored " + isCorrect + "/5. And your score is " + timeOnPage
+    // initial form appear
+    hiddenInitial.style.display = "block";
     // store into local storage and get them
+    localStorage.setItem("score", timeOnPage)
 }
+
+
+submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    let input = document.querySelector("#initials").value
+    console.log(input)
+    localStorage.setItem("initial", input);
+    location.href= "score.html";
+})
 
 
 function startGame() {
