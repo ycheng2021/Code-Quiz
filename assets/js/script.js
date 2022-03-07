@@ -8,6 +8,7 @@ let message = document.querySelector('.message');
 let highscoreButton = document.querySelector('.highscores');
 let hiddenInitial = document.querySelector('.hidden');
 let submitButton = document.querySelector('.submit');
+let restartButton = document.querySelector('.restart-btn');
 // let clearButton = document.querySelector('.clear-score');
 
 // countdown timer
@@ -22,6 +23,8 @@ let isCorrect = 0;
 let questionCounter = 0;
 // sets the timer to 100 when page loads
 time.textContent = timer;
+// hide restart button unless game over
+restartButton.style.visibility = "hidden";
 
 // store all question, answers, and correct answer here to call on
 const myQuestions = [
@@ -73,6 +76,7 @@ function startTimer() {
             questionEl.textContent = "";
             answerChoices.textContent = "";
             message.textContent = "Oh no, you ran out of time. Game Over!"
+            restartButton.style.visibility = "visible";
         }
     }, 1000);
 }

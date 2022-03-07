@@ -48,12 +48,20 @@ ul {
 
 .start-btn {
     box-shadow: 3px 3px rgb(26, 96, 161);
-    margin: 20px auto 10px;
+    margin: 50px auto 10px;
     padding: 5px 20px;
     background-color: white;
     border-radius: 5px;
     color: rgb(45, 137, 223);
     font-size: 20px;
+}
+
+.restart-btn {
+    background-color: white;
+    color: rgb(45, 137, 223);
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 5px 10px;
 }
 
 .answer-btn {
