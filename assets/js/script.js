@@ -61,10 +61,18 @@ function startTimer() {
         time.textContent = timer;
         // if statement
         // when game ends, stop timer from running
-        if (questionCounter > 4 || timer === 0) {
+        if (questionCounter > 4) {
             clearInterval(timeInterval)
             // highscore becomes leftover timer
             highscore.score = timer
+        }
+
+        if (timer === 0) {
+            clearInterval(timeInterval);
+            highscore.score = timer;
+            questionEl.textContent = "";
+            answerChoices.textContent = "";
+            message.textContent = "Oh no, you ran out of time. Game Over!"
         }
     }, 1000);
 }
